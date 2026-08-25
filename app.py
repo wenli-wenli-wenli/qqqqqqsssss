@@ -2,6 +2,8 @@ from flask import Flask
 from flask_socketio import SocketIO
 
 app = Flask(__name__)
+@app.route('/')
+
 app.config['SECRET_KEY'] = 'secret!'
 # 允许跨域，你的网页是github.io域名，后台是render域名，必须开
 socketio = SocketIO(app, cors_allowed_origins="*")
