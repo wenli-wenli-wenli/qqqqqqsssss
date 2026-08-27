@@ -1,3 +1,4 @@
-flask
-flask-socketio
-gunicorn
+Flask>=3.0
+Flask‑SocketIO>=5.4
+gevent>=24.0
+
