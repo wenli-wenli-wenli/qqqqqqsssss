@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_socketio import SocketIO
 app = Flask(__name__)
-socketio = SocketIO(app,cors_allowed_origins="*")
+socketio = SocketIO(app,cors_allowed_origins="*",async_mode="threading")
 @socketio.on('chat')
 def receive_chat(message):
     socketio.emit('chat', message,broadcast=True)
